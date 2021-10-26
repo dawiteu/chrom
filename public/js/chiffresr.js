@@ -58,8 +58,8 @@ numbers.forEach((number, index) => {
             numbers[index].type == 1 ? number.romVal + number.romVal + number.romVal : "----", // numbers[index+1].romVal 
             number.romVal + nextItem.romVal,
             nextItem.romVal,
-            number.romVal === "M" ? "(VI)" :nextItem.romVal + number.romVal, 
-            number.romVal === "M" ? "(VII)" :nextItem.romVal + number.romVal + number.romVal, 
+            number.romVal === "M" ? "(VI)"   : nextItem.romVal + number.romVal, 
+            number.romVal === "M" ? "(VII)"  : nextItem.romVal + number.romVal + number.romVal, 
             number.romVal === "M" ? "(VIII)" : nextItem.romVal + number.romVal + number.romVal + number.romVal, 
             //numbers[index].type == 1 ? number.romVal + numbers[index-1].romVal : numbers[index+1].romVal, 
             numbers[index+2] && number.romVal === "M" ? "(IX)" : number.romVal + numbers[index+2].romVal
@@ -75,12 +75,20 @@ console.log(arraysNumbers, 1 % 2 === 0, 2 % 2 === 0);
 //console.log(numbersProperty[1]); 
 
 const convertNumber = (number) => {
+    let response = []; 
     console.log(`Try to convert : ${number}`);
 
     let arrays = Array.from(number); 
     arrays = arrays.reverse(); 
     console.log(`arrays : `, arrays); 
-    console.log(`il y a : ${arrays.length} de chiffres ds ce nombre`); 
+    //console.log(`il y a : ${arrays.length} de chiffres ds ce nombre`); 
+
+    arrays.forEach((numb, index) => {
+        console.log('numb : ', numb); 
+        numb !== "0" && response.push(arraysNumbers[index][numb-1]);
+    });
+    response = response.reverse().join('');
+    return response; 
 }
 
 export default convertNumber; 
