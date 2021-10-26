@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <script src="./public/js/main.js" type="module" defer></script>
+    <script src="./public/js//chiffresr.js" type="module" defer></script>
+</head>
+<body>
+    <main>
+        <p>Important à savoir: </p>
+        <div id="informdiv">
+            <ul>
+                <li class="green">I = 1 </li>
+                <li class="red">V = 5</li>
+                <li class="green">X = 10</li>
+                <li class="red">L = 50</li>
+                <li class="green">C = 100</li>
+                <li class="red">D = 500</li>
+                <li class="green">M = 1000</li>
+            </ul>
+            <div>
+                <p>Les symboles en <span class="green">vert</span> peuvent se suivre <span class="green">3</span> fois</p>
+                <p>Les symboles en <span class="red">rouge</span> ne peuvent pas se suivre <span class="red">3</span> fois</p>
+                <p>Exemple:  <span class="bg-red">L</span> <span class="bg-green">X</span> <span class="bg-green">I</span> = 61 </p>
+            </div>
+        </div>
+        <form action="#" method="#" class="design">
+            <label for="numtorom">Nombre à convertir:</label>
+            <input type="number" name="numtorom" min="1" max="9999" id="numb" />
+            <button type="submit" id="convert-btn">Convertir</button>
+        </form>
+        <div id="response" class="design">
+            <p>Résultat: <span id="convertresult"></span></p>
+        </div>
+    </main>
+</body>
+</html>
