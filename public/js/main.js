@@ -11,7 +11,6 @@ btn.addEventListener("click", function(e){
     e.preventDefault();
     let num = document.querySelector("#numb"); 
     if(lastVal != num.value){
-        //alert(num.value)
         if(num.value <= 9999){
             lastVal=num.value; 
             console.log('convert click!', num.value);
